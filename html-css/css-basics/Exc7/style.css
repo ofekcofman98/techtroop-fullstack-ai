@@ -1,0 +1,20 @@
+body {
+    background-image: url("../public/background/andrew-ridley-WcxOZSezy0k-unsplash.jpg");
+    background-size: cover;
+    font-family:cursive;
+    color: white;
+    padding: 40px;
+}
+
+.transparent-title {
+    background-color:slategray;
+    opacity: 0.5;
+    width: 300px;
+    padding: 20px;
+}
+
+.title {
+    background-color:cadetblue;
+    width: 300px;
+    padding: 20px;
+}

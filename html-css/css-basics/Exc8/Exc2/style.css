@@ -1,0 +1,32 @@
+body {
+    background-color: #fff8e1;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    color: coral;
+    font-size: 48px;
+}
+
+.content-section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    background-color: #dce8f2;
+    color: #4a90e2;
+    padding: 10px;
+    border-left: 5px solid #4a90e2;
+}
+
+.section-description {
+    font-style: italic;
+    color: gray;
+}
+
+.highlight {
+
+    color: tomato;
+}
