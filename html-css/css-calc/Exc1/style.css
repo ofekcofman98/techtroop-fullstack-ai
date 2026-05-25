@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    height: 200px;
+}
+
+#section1 {
+    width: calc(100% - 20px);
+    background-color: aquamarine;
+} 
+
+#section2 {
+    width: 20px;
+    background-color: mediumorchid;
+} 
+
