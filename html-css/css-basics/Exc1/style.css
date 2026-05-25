@@ -1,0 +1,17 @@
+.line1 {
+    font-size: 25px;
+    color: darkcyan;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.line2 {
+    font-size: 30px;
+    color:deeppink;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.line3 {
+    font-size: 35px;
+    color:sandybrown;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

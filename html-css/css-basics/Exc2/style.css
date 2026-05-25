@@ -1,0 +1,22 @@
+body  {
+    background-color:blanchedalmond;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bookmarks-container {
+    margin-top: 20px;
+}
+
+.bookmark {
+    color:white;
+    background-color: saddlebrown;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.bookmark:hover {
+    background-color: rgb(173, 87, 25);
+}

@@ -1,0 +1,31 @@
+table {
+    border: solid black;
+    border-width: 1px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border-bottom: 1px solid gray;
+    padding: 5px;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.row-header {
+    background-color: lightgrey;
+}
+
+.row-data {
+    background-color:palegreen;
+}
+
+.row-data > .team {
+    font-weight: bold;
+}
+
+.row-data > .points {
+    font-weight: bold;
+}
