@@ -1,0 +1,39 @@
+body {
+    background-color:whitesmoke;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+}
+
+.header a {
+    text-decoration: none;
+    color:darkslategray;
+}
+
+img {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px lightgray;
+}
+
+.text-container {
+    background-color: wheat;
+    width: 400px;
+    padding: 2px;
+    padding-left: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px lightgray;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#details-container span:first-child {
+    font-weight: bold;
+}
+
+#instructions-container {
+    width: 600px;
+}
+
+.title {
+    font-weight: bold;
+}
