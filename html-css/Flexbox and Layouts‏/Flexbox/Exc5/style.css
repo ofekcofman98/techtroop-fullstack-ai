@@ -1,31 +1,46 @@
-:root {
-    --square-color: seashell;
-}
-
 body {
     background-color: lightskyblue;
 }
 
 .square {
     background-color: seashell;
-    width: 10px;
-    height: 10px;
+}
 
+.container {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 10px auto;
 }
 
 .squares-container {
     display: flex;
     flex-direction: row;
+    gap: 10px;
+}
+
+.small-squares-container {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: 10px;
 }
-/* 
+
+.row {
+    flex: 1;
+
+    display: flex;
+    gap: 10px;
+} 
+
 .big {
-    flex: 2;
-    width: 10px;
-    height: 10px;
+    flex: 1;
+    aspect-ratio: 1 / 1;
 }
 
 .small {
     flex: 1;
-} */
+}
