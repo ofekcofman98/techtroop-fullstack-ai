@@ -1,0 +1,31 @@
+:root {
+    --square-color: seashell;
+}
+
+body {
+    background-color: lightskyblue;
+}
+
+.square {
+    background-color: seashell;
+    width: 10px;
+    height: 10px;
+
+}
+
+.squares-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+/* 
+.big {
+    flex: 2;
+    width: 10px;
+    height: 10px;
+}
+
+.small {
+    flex: 1;
+} */

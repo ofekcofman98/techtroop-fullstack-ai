@@ -7,65 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="page">
-        <header class="header">
-            <h1 class="header-title">Holy Grail Layout Demo</h1>
-        </header>
-        <main class="layout">
-            <nav class="nav grey-background">
-                <h2 class="secondary-title">Navigation</h2>
-                <div class="nav-links-container">
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Portfolio</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Contact</a>
-                </div>
-            </nav>
-            
-            <section class="content">
-                <div class="description">
-                    <h1>Welcome to the Holy Grail Layout</h1>
-                    <p class="text">
-                        This is a demonstration of the classic "Holy Grail" layout pattern
-                        implemented using CSS Flexbox. The Holy Grail layout is a web page
-                        layout that consists of a header, footer, and three columns.
-                    </p>
-                </div>
-                <div class="features grey-background card">
-                    <h3 class="card-title">Key Features</h3>
-                    <p class="text">    
-                        This layout demonstrates several important web development concepts
-                        including flexible content areas, sticky footer positioning, and
-                        responsive design principles that adapt to different screen sizes.
-                    </p>
-                </div>
-            </section>
-
-            <aside class="sidebar grey-background">
-                <h2 class="secondary-title">Sidebar</h2>
-                <div class="cards-container">
-                    <div class="card white-background">
-                        <h3 class="card-title">Quick Info</h3>
-                        <p class="text">
-                            This sidebar demonstrates how flexible content areas work in the
-                            Holy Grail layout structure.
-                        </p>
-                    </div>
-                    <div class="card white-background">
-                        <h3 class="card-title">Latest News</h3>
-                        <p class="text">
-                            Sample content showing how widgets and secondary information can
-                            be displayed inside sidebar cards.
-                        </p>
-                    </div>
-                </div>
-            </aside>
-        </main>
-        <footer class="footer">
-            © 2025 Holy Grail Layout Demo
-        </footer>
+    <div>
+        <p>4 boxes evenly distributed</p>
+        <div class="parent" id="evenly">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+        </div>
+    </div>
+    <div>
+        <p>2 boxes (2 and 3) are twice as big as the first</p>
+        <div class="parent" id="not-evenly">
+            <div class="box small">1</div>
+            <div class="box big">2</div>
+            <div class="box big">3</div>
+        </div>
     </div>
 </body>
 </html>
