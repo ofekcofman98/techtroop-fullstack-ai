@@ -1,0 +1,60 @@
+#container {
+    background-color: #6c5ce7;
+    width: 25%;
+    height: 200px;
+    margin: auto;
+    position: relative;
+    border-radius: 5px;
+}
+
+.label {
+    position: absolute;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#money-label {
+    top: 0;
+    left: 10px;
+}
+
+#time-label {
+    bottom: 0;
+    right: 10px;
+}
+
+.bars-container {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 50px;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+
+}
+
+.bar {
+    width: 10%;
+    background-color: #b2bec3;
+}
+
+#bar1 {
+    height: 20px;
+}
+
+#bar2 {
+    height: 70px;
+}
+
+#bar3 {
+    height: 120px;
+}
+
+#bar4 {
+    height: 90px;
+}
+
+#bar5 {
+    height: 40px;
+}

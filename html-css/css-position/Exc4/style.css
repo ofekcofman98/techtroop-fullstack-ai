@@ -1,0 +1,51 @@
+.container {
+    background-color: white;
+    width: 300px;
+    height: 200px;
+    margin: 50px auto;
+
+    position: relative;
+}
+
+.main {
+    background-color: #d63031;
+    height: 70%;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.edge {
+    background-color: #b2bec3;
+    height: 30%;
+    width: 20%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: absolute;
+    top:0;
+}
+
+#left-edge {
+    left: 0;
+}
+
+#right-edge {
+    right: 0;
+}
+
+.space {
+    background-color: white;
+    position: absolute;
+
+    width: 60%;
+    height: 70%;
+
+    top: 0;
+    left: 20%;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
