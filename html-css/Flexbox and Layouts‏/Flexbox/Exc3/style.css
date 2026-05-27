@@ -1,0 +1,27 @@
+.parent {
+    width: 300px;
+    height: 250px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    border: 1px solid black;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    width: 80px;
+    height: 80px;
+    background-color: navy;
+    border-radius: 50%;
+}
+
+.right p {
+    width: 80%;
+    font-size: 12px;
+}

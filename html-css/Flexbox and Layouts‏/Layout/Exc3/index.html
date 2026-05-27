@@ -7,5 +7,82 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="card"> 
+        <form method="post">
+            <div class="header-container">
+                <h1>Contact Form</h1>
+                <p>Get in touch with us</p>
+            </div>
+            <div class="inputs-container">
+                <div class="row">
+                    <div class="input-group">
+                        <label for="first-name">First Name</label>
+                        <input class="input" id="first-name" type="text" name="firstName">
+                    </div>
+                    <div class="input-group">
+                        <label for="last-name">Last Name</label>
+                        <input class="input" id="last-name" type="text" name="lastName">
+                    </div>
+                </div>
+                <div class="row full-width">
+                    <div class="input-group">
+                        <label for="email">Email Adress</label>
+                        <input class="input" id="email" type="email" name="email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label for="subject">Subject</label>
+                        <select class="input" name="subject" id="subject">
+                            <option value="">Select a topic</option>
+                            <option value="support">Support</option>
+                            <option value="billing">Billing</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="partnership">Partnership</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="priority">Priority</label>
+                        <select class="input" name="priority" id="priority">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                            <option value="urgent">Urgent</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group full-width">
+                        <label   for="message">Message</label>
+                        <textarea class="input" id="message" name="message" placeholder="Tell us how we can help..."></textarea>
+                    </div>
+                </div>
+                <div>
+                    <label>Contact Preferences</label>
+                    <div class="row">
+                        <div class="checkbox-group">
+                            <input type="checkbox" name="preferences" id="preferences-email">
+                            <label for="preferences-email">Email Updates</label>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" name="preferences" id="preferences-phone">
+                            <label for="preferences-phone">Phone Follow-up</label>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" name="preferences" id="preferences-newsletter">
+                            <label for="preferences-newsletter">Newsletter</label>
+                        </div>
+                    </div>
+
+                    <div class="buttons-container">
+                        <button class="button" id="save">Save Draft</button>
+                        <button class="button" id="send">Send Message</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

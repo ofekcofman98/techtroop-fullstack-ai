@@ -1,105 +1,109 @@
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-.page {
-    width: 100%;
-    height: 100%;
-
+body {
     display: flex;
     flex-direction: column;
+
+    min-height: 100vh;
+    margin: 0;
     
+    background-color: #f8f9fa;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
-    background-color: blueviolet;
-    height: 50px;
-    padding: 20px;
+    background: linear-gradient(to right, #5b6ee1, #8f1bdd);
 }
 
-.header h1 {
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-left: 20px;
-}
-
-.layout {
-    width: 100%;
+main {
     flex: 1;
 
     display: flex;
+    justify-content: center;
+    align-items: start;
 }
-
-.description h1 {
-    font-size: 24px;
-}
-
-.secondary-title {
-    font-size: 18px;
-}
-
 /*####### nav ########*/
 
 .nav {
-    width: 100px;
-    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: stretch;
 }
 
 .nav-links-container {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    align-items: stretch;
+
+    margin: 0;
+    padding: 0;
+    
+    list-style-type: none;
+}
+
+.nav-links-container li {
+    display: flex;
+    align-items: stretch;
 }
 
 .nav-links-container a {
+    display: flex;
+    align-items: center;
+
+    padding: 15px 15px;
+
     text-decoration: none;
-    color: gray;
+    color: white;
+    
 }
+
+.nav-links-container > li:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
 /*###################*/
 
-.content {
-    flex: 1;
-    padding: 20px;
+
+/*####### dropdown ########*/
+
+.dropdown {
+    position: relative;
 }
 
-.features {
-    width: 90%;
-    margin: 0 auto;
+.dropdown-menu {
+    display: none;
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 200px;
+
+    list-style: none;
 }
 
-.sidebar {
-    width: 100px;
-    padding: 20px;
-}
-
-.footer {
-    background-color: black;
+.dropdown-menu a {
+    color: black;
     width: 100%;
-    padding: 20px;
-    color: white;
-    text-align: center;
 }
 
-.grey-background {
-    background-color: #f8f9fa;
-}
-
-.white-background {
-    background-color: white;
-}
-
-.cards-container {
+.dropdown:hover .dropdown-menu {
     display: flex;
     flex-direction: column;
-    gap: 10px;    
 }
+
+.dropdown-menu li:hover {
+    background-color: #f0f0f0;
+}
+/*#########################*/
 
 .card {
     border-radius: 5px;
-    border: 1px solid grey;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     padding: 5px;
+    margin: 3% 10px;
+    text-align: center;
 }
 
 .card-title {
@@ -107,5 +111,5 @@ html, body {
 }
 
 .text {
-    font-size: 12px;
+    font-size: 16px;
 }

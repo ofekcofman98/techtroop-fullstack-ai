@@ -1,0 +1,105 @@
+body {
+    background: linear-gradient(to right, #5b6ee1, #8f1bdd);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #343434;
+}
+
+.card {
+    background-color: white;
+    width: 60%;
+    
+    border-radius: 10px;
+    margin: 60px auto;
+}
+
+.header-container {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.header-container h1{
+    margin-bottom: 5px;
+}
+
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.input {
+    border-radius: 4px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+
+}
+
+textarea {
+    min-height: 120px;
+    max-height: 300px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+input,
+select {
+    height: 40px;
+}
+
+.checkbox-group {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.buttons-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#save {
+    background-color: #f1f1f1;
+    color: #555;
+}
+
+#save:hover {
+    background-color: #dddddd;
+}
+
+#send {
+    background: linear-gradient(to right, #3fa9f5, #00fbff);
+    color: white;
+}
+
+#send:hover {
+    opacity: 0.8;
+}

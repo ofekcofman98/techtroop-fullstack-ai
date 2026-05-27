@@ -1,27 +1,22 @@
 .parent {
-    width: 300px;
-    height: 250px;
-
     display: flex;
-    flex-direction: row;
+    width: 200px;
+    height: 100px;
 }
 
-.container {
-    border: 1px solid black;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#evenly .box {
+    flex: 1;
 }
 
-.dot {
-    width: 80px;
-    height: 80px;
-    background-color: navy;
-    border-radius: 50%;
+.box {
+    background-color:indianred;
+    border: 2px solid sandybrown;
 }
 
-.right p {
-    width: 80%;
-    font-size: 12px;
+.small {
+    flex: 1;
+}
+
+.big {
+    flex: 2;
 }
