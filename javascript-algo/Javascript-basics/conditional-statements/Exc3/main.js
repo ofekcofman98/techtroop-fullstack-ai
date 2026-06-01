@@ -1,0 +1,28 @@
+let temperature = 20;
+let weather = "sunny";
+
+const BEACH_TEMPERATURE = 24;
+const WALK_TEMPERATURE = 15;
+
+if (weather === "sunny") {
+    if (temperature > BEACH_TEMPERATURE) {
+        console.log("Go to the beach");
+    }
+    else if (temperature >= WALK_TEMPERATURE) {
+        console.log("Go for a walk");
+    }
+    else {
+        console.log("Stay inside and read");
+    }
+}
+else if (weather === "rainy") {
+    console.log("Watch a movie indoors");
+}
+else if (weather === "cloudy") {
+    if (temperature > 21) {
+        console.log("Go hiking");
+    }
+    else {
+        console.log("Visit a museum");
+    }
+}
