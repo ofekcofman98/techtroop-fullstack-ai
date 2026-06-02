@@ -15,3 +15,7 @@
 // 52 !== "52" = true
 
 // (undefined || null) = false
+
+let x = [ {human: {name: 'Daena', age: 31} } ][0].age 
+
+console.log(x);
