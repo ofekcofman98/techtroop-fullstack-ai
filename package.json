@@ -1,0 +1,21 @@
+{
+  "name": "techtroop",
+  "version": "1.0.0",
+  "description": "TechTroop Fullstack Course Exercises",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ofekcofman98/techtroop-fullstack-ai.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ofekcofman98/techtroop-fullstack-ai/issues"
+  },
+  "homepage": "https://github.com/ofekcofman98/techtroop-fullstack-ai#readme"
+}
