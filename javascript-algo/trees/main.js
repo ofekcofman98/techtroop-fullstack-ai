@@ -63,6 +63,54 @@ class BSNode {
         }
     }
 
+    removeNode(parent, val) {
+        if (val < this.value) {
+            if (this.leftChild) {
+                this.leftChild.removeNode(this, val);
+            }
+        } 
+        else if (val > this.value) {
+            if (this.rightChild) {
+                this.rightChild.removeNode(this, val);
+            }
+        } 
+        
+        else {
+            if (!this.leftChild && !this.rightChild) {
+                if (parent.leftChild === this) {
+                    parent.leftChild = null;
+                } else if (parent.rightChild === this) {
+                    parent.rightChild = null;
+                }
+            }
+            
+            else if (!this.leftChild || !this.rightChild) {
+                let childToMove = this.leftChild ? this.leftChild : this.rightChild;
+                
+                if (parent.leftChild === this) {
+                    parent.leftChild = childToMove;
+                } else if (parent.rightChild === this) {
+                    parent.rightChild = childToMove;
+                }
+            }
+            
+            else {
+                let maxLeftNode = this.leftChild;
+                while (maxLeftNode.rightChild) {
+                    maxLeftNode = maxLeftNode.rightChild;
+                }
+                
+                let tempValue = maxLeftNode.value;
+                
+                this.leftChild.removeNode(this, tempValue);
+                
+                this.value = tempValue;
+            }
+        }
+        
+        return parent;
+    }
+
 }
 
 console.log("############### Test for Exc1: ###############")
@@ -101,3 +149,15 @@ console.log(bsTree2.findCommonParent("B", "G")); // "E"
 console.log(bsTree2.findCommonParent("B", "L")); // "J"
 console.log(bsTree2.findCommonParent("L", "Y")); // "R"
 console.log(bsTree2.findCommonParent("E", "H")); // "H"
+
+
+console.log("############### Test for Exc3: ###############")
+const numbers = [8, 9, 12, 3, 5, 1, 11, 4];
+
+let nodeWithOneChild = new BSNode();
+numbers.forEach(n => nodeWithOneChild.insertNode(n));
+console.log(nodeWithOneChild.removeNode(nodeWithOneChild, 9)); 
+
+let nodeWithTwoChildren = new BSNode();
+numbers.forEach(n => nodeWithTwoChildren.insertNode(n));
+console.log(nodeWithTwoChildren.removeNode(nodeWithTwoChildren, 8));
