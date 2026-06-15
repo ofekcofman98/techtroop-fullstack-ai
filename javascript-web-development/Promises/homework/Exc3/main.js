@@ -42,19 +42,19 @@ function calculateTotal(items) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
         
-        let subTotal=0, totalPrice=0, totalTax=0;
-        
-        for (const item of items) {
-            const itemData = inventory[item];
-            if (itemData){
-                const price = itemData.price;
-                const tax = price * 0.08;
-                const tota; = 
-                subTotal += item.price;
-                tax += item.p
-                totalPrice += item.price * 1.08;
-            }
+    let subtotal = 0;
+      
+      for (const item of items) {
+        const itemData = inventory[item];
+        if (itemData) {
+          subtotal += itemData.price;
         }
+      }
+
+      const tax = subtotal * 0.08;
+      const total = subtotal + tax;
+
+      resolve({ subtotal, tax, total });
     }, 200);
   });
 }
@@ -65,6 +65,22 @@ function processPayment(amount) {
   // 2. 90% success rate
   // 3. Resolves with { transactionId, amount, status: 'success' }
   // 4. Rejects with payment failure error
+  
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+        if (Math.random() < 0.10) {
+            reject(new Error("Payment failed!"));
+        } else {
+            const randomId = Math.floor(Math.random() * 90000) + 10000;
+
+            resolve({
+            transactionId: randomId,
+            amount: amount,
+            status: 'success'
+            }); 
+        }  
+    }, 1500);
+  });
 }
 
 function updateInventory(items) {
@@ -72,6 +88,20 @@ function updateInventory(items) {
   // 1. Waits 300ms
   // 2. Reduces stock for each item
   // 3. Resolves with updated inventory status
+
+    return new Promise((resolve, reject) => {
+    setTimeout(() => {
+        for (const item of items) {
+            let itemData = inventory[item];
+            if (itemData) {
+            itemData.stock--;
+            }
+        }
+
+        resolve(inventory);
+    }, 300);
+  });
+
 }
 
 // TODO: Create a complete checkout function that:
@@ -82,6 +112,31 @@ function updateInventory(items) {
 
 function checkout(itemNames) {
   // TODO: Implement the complete checkout flow
+
+  return checkInventory(itemNames)
+    .then((checkedItems) => { 
+        return calculateTotal(checkedItems);
+    })
+    .then((priceDetails) => {
+        return processPayment(priceDetails.total).then((paymentResult) => {
+            return { priceDetails, paymentResult };
+        });
+    })
+    .then(({priceDetails, paymentResult}) => {
+        return updateInventory(itemNames).then(() => {
+            return {
+                status: "Order Completed",
+                transactionId: paymentResult.transactionId,
+                subtotal: priceDetails.subtotal,
+                tax: priceDetails.tax,
+                totalPaid: paymentResult.amount
+            };
+        });
+    })
+    .catch((error) => {
+        console.error("Checkout Error:", error.message);
+        throw error;
+    });
 }
 
 // Test cases:
