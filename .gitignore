@@ -10,4 +10,32 @@ yarn-error.log*
 .vscode/
 .DS_Store
 
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+# (הדבר הכי קורקטי - מונע דחיפה של תיקיית הספריות הכבדה)
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Editor directories and files
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environments
+# (חשוב מאוד לראיונות: כאן יושבים המפתחות הסודיים של ה-API שלך!)
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
