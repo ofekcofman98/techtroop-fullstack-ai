@@ -3,6 +3,9 @@ import ReactLesson1 from './lessons/React Intro and JSX';
 import Hudini from './lessons/React State/Hudini';
 import StoreExercise from './lessons/React State/Strore/index';
 
+import Exercise1 from './lessons/React Input/Exercise1';
+import Exercise2 from './lessons/React Input/Exercise2';
+
 function App() {
 
   return (
@@ -16,6 +19,14 @@ function App() {
       <hr />
 
       <StoreExercise/>
+
+      <hr />
+
+      <Exercise1 />
+
+      <hr />
+
+      <Exercise2 />
     </>
   )
 }
