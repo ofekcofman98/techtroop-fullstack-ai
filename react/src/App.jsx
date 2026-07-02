@@ -5,9 +5,9 @@ import './App.css'
 
 // import Exercise1 from './lessons/React Input/Exercise1';
 // import Exercise2 from './lessons/React Input/Exercise2';
+import Exercise2 from './lessons/useEffect and Lifecycle/Exercise2';
 
-
-import Exercise2 from './lessons/React Data Flow/Exercise2/Exercise2';
+// import Exercise2 from './lessons/React Data Flow/Exercise2/Exercise2';
 function App() {
 
   return (
@@ -30,7 +30,9 @@ function App() {
 
       <Exercise2 /> */}
 
-      <Exercise2/>
+      <Exercise2
+        postsToFetch={10}
+        />
     </>
   )
 }
