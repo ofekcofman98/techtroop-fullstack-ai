@@ -3,6 +3,7 @@ import { data } from "../React Data Flow/Exercise2/data";
 
 const Exercise2 = ({postsToFetch = 10}) => {
     const [posts, setPosts] = useState([]);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -21,6 +22,20 @@ const Exercise2 = ({postsToFetch = 10}) => {
         fetchPosts();
     },[]);
 
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
+    const isSmallScreen = windowWidth < 600;
+    
     return (
         <div style={{ padding: "20px" }}>
 
@@ -28,7 +43,7 @@ const Exercise2 = ({postsToFetch = 10}) => {
                 <div 
                     style={{ 
                         display: "grid", 
-                        gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", 
+                        gridTemplateColumns: isSmallScreen ? "1fr" : "repeat(auto-fill, minmax(220px, 1fr))",
                         gap: "20px",
                         marginTop: "20px"}}
                 >
